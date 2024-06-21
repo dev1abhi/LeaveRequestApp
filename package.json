@@ -1,0 +1,95 @@
+{
+  "name": "leaverequestapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main/index.js",
+  "scripts": {
+    "start-react": "cd src/renderer && npm start",
+    "start-backend": "node src/backend/server.js",
+    "electron": "electron src/main/index.js",
+    "start": "concurrently \"npm run start-react\" \"npm run start-backend\" \"npm run electron\"",
+    "build-react": "cd src/renderer && npm run build",
+    "build-electron": "cross-env NODE_ENV=production electron-builder"
+  },
+  "build": {
+    "appId": "com.example.leaverequestapp",
+    "productName": "LeaveRequestApp",
+    "files": [
+      "src/main/**/*",
+      "src/renderer/build/**/*",
+      "src/backend/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "public/**/*",
+      ".env",
+      "package-lock.json",
+      "database.db"
+    ],
+    "directories": {
+      "buildResources": "resources",
+      "output": "dist"
+    },
+    "asar": false,
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "extraMetadata": {
+      "main": "src/main/index.js"
+    },
+    "extends": null,
+    "compression": "normal"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "browserify-zlib": "^0.2.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "electron-is-dev": "^3.0.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.3",
+    "mssql": "^11.0.0",
+    "mysql": "^2.18.1",
+    "node-cron": "^3.0.3",
+    "node-notifier": "^10.0.1",
+    "open": "^10.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
+    "sqlite3": "^5.1.6",
+    "stream-browserify": "^3.0.0",
+    "uuid": "^10.0.0",
+    "web-push": "^3.6.7"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "concurrently": "^8.2.2",
+    "crypto-browserify": "^3.12.0",
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3",
+    "ncp": "^2.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "util": "^0.12.5",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

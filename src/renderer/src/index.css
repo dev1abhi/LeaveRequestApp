@@ -1,0 +1,343 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Container Styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Common Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  width: 200px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-weight: bold;
+  padding-right: 5rem;
+}
+
+input {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  /* margin-left: 30rem;
+  margin-right: 30rem; */
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  
+  /* align this button to the right end of container */
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+  width: 100px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Page Title Styles */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Employee dashboard styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+li p {
+  margin: 0 0 5px;
+}
+
+li button {
+  margin-right: 10px;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #0056b3;
+}
+
+/* Brand/logo styles */
+.navbar-brand {
+  margin: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual link styles */
+.navbar-links a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+/* Link hover effect */
+.navbar-links a:hover {
+  color: #ffdd57;
+  text-decoration:solid;
+}
+
+/* Active link styles */
+.navbar-links a.active {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+.navbar .nav-right button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+.navbar .nav-right button:hover {
+  background-color: #ff1a1a;
+}
+
+
+
+/* admin dashboard */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.notification-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.notification-item.unseen {
+  background-color: #f9f9f9;
+}
+
+.notification-item.seen {
+  background-color: #e9e9e9;
+}
+
+.notification-detail {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* AdminNavbar.css */
+
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.admin-navbar .nav-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-navbar .nav-left a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.admin-navbar .nav-left a:hover {
+  background-color: #555;
+}
+
+.admin-navbar .nav-right button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.admin-navbar .nav-right button:hover {
+  background-color: #ff1a1a;
+}
+
+
+
+
+/* Container for the Leave Request Details */
+.leave-request-details {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Heading styles */
+.leave-request-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Paragraph styles */
+.leave-request-details p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Button styles */
+.leave-request-details button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.leave-request-details button:hover {
+  background-color: #ddd;
+}
+
+.leave-request-details button:active {
+  background-color: #ccc;
+}
+
+/* Specific styles for the Accept and Reject buttons */
+.leave-request-details .accept-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.leave-request-details .reject-button {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.leave-request-details .accept-button:hover {
+  background-color: #45a049;
+}
+
+.leave-request-details .reject-button:hover {
+  background-color: #e53935;
+}
+
+
+
+/* Basic styling for dropdown container */
+.dropdown-container {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Label styling */
+.dropdown-container label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Select dropdown styling */
+.dropdown-container select {
+  width: 250px; /* Adjust width as needed */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Option styling */
+.dropdown-container select option {
+  padding: 8px;
+}
+
+/* Hover effect on options */
+.dropdown-container select option:hover {
+  background-color: #f0f0f0; /* Light gray background on hover */
+}
